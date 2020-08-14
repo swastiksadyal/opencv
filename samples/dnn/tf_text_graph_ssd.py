@@ -247,7 +247,7 @@ def createSSDGraph(modelPath, configPath, outputPath):
     graph_def.node[1].input.append(graph_def.node[0].name)
     graph_def.node[1].input.append(weights)
 
-    # Create SSD postprocessing head ###############################################
+    # Create SSD postprocessing head ################################################
 
     # Concatenate predictions of classes, predictions of bounding boxes and proposals.
     def addConcatNode(name, inputs, axisNodeName):
